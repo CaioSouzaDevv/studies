@@ -19,6 +19,7 @@ public class ProdutoService {
             }
         }
         listaProdutos.add(produto);
+        System.out.println("Produto cadastrado com sucesso.");
 
     }
 
