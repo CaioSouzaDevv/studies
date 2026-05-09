@@ -48,7 +48,13 @@ public class Main {
                         System.out.println("Digite o novo nome");
                         String novoNome = menu.nextLine();
 
-                        service.atualizaProduto(idRecebido, novoNome);
+                        System.out.print("Digite o novo preço");
+                        double novoPreco = menu.nextDouble();
+
+                        System.out.println("Digite a quantidade do novo produto disponivel");
+                        int novaQtd = menu.nextInt();
+
+                        service.atualizaProduto(idRecebido, novoNome, novoPreco, novaQtd);
 
                         
 

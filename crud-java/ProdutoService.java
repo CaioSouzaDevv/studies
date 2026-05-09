@@ -42,15 +42,20 @@ public class ProdutoService {
         }
     }
 
-    public void atualizaProduto(int idRecebido, String novoNome) {
+    public void atualizaProduto(int idRecebido, String novoNome, double novoPreco, int novaQtd) {
 
         boolean idEncontrado = false;
         for (Produto produto : listaProdutos) {
             if (idRecebido == produto.id) {
                 produto.nome = novoNome;
+                produto.preco = novoPreco;
+                produto.quantidade = novaQtd;
+                System.out.println("Produto renomeado para " + novoNome);
+                System.out.println("Produto com novo preço " + novoPreco);
+                System.out.println("Nova quantidade disponivel " + novaQtd);
                 System.out.println("Produto renomeado para " + novoNome);
                 idEncontrado = true;
-            } 
+            }
         }
         if (!idEncontrado) {
             System.out.println("Id não encontrado");
