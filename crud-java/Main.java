@@ -19,6 +19,7 @@ public class Main {
             System.err.println("3- Deletar Produto por ID");
             System.err.println("4- Lista Produto");
             System.err.println("5- Adicionar Produto");
+            System.err.println("6- Buscar Produto por id");
 
             System.err.println("Escolha uma opção");
 
@@ -91,6 +92,12 @@ public class Main {
 
                         service.adicionarNovoProduto(p3);
                         break;
+
+                    case 6:
+                        System.out.println("Digite o id que desja buscar");
+                        int buscaPorId = menu.nextInt();
+
+                        service.buscaProdutoPorId(buscaPorId);
 
                     default:
                         break;

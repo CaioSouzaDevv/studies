@@ -7,14 +7,19 @@ public class ProdutoService {
 
     public void adicionarProduto(Produto produto) {
 
+        
         listaProdutos.add(produto);
 
     }
 
     public void adicionarNovoProduto(Produto produto) {
+        if(produto.id <= 0) {
+            System.err.println("ID negativo ou igual a 0. tente novamente");
+            return;
+        }
         for (Produto produtoNovo : listaProdutos) {
             if (produtoNovo.id == produto.id) {
-                System.out.println("ID duplicado. Tente novamente");
+                System.out.println("ID duplicado ou inválido. Tente novamente");
                 return;
             }
         }
@@ -71,13 +76,33 @@ public class ProdutoService {
         }
     }
 
+    public void buscaProdutoPorId(int buscaPorId) {
+        boolean produtoEncontradoPorId = false;
+
+        for (Produto produto : listaProdutos) {
+            if (produto.id == buscaPorId) {
+                System.out.println("Produto encontrado.");
+                System.out.println("Nome: " + produto.nome);
+                System.out.println("Id: " + produto.id);
+                System.out.println("Preço: " + produto.preco);
+                System.out.println("Quantidade: " + produto.quantidade);
+                produtoEncontradoPorId = true;
+
+            }
+        }
+        if (!produtoEncontradoPorId) {
+            System.err.println("ID não registrado na base");
+        }
+    }
+
     public void mostraProduto() {
         if (listaProdutos.isEmpty()) {
             System.out.println("Não temos produtos cadastrados");
         }
         for (Produto produto : listaProdutos) {
-
+            System.out.println("-----------------");
             produto.exibirDetalhes();
+
         }
 
     }
