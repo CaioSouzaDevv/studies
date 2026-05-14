@@ -3,7 +3,9 @@ import java.util.List;
 
 public class ProdutoService {
 
-    List<Produto> listaProdutos = new ArrayList<>();
+ProdutoRepository repository = new ProdutoRepository();
+
+
 
     public void adicionarNovoProduto(Produto produto) {
         if (produto.nome.isBlank()) {
@@ -30,7 +32,7 @@ public class ProdutoService {
             System.out.println("Quantidade inválido, tente novamente.");
             return;
         }
-        for (Produto produtoNovo : listaProdutos) {
+        for (Produto produtoNovo : repository.listaProdutos) {
             if (produtoNovo.id == produto.id) {
                 mostrarSeparador();
 
@@ -38,7 +40,7 @@ public class ProdutoService {
                 return;
             }
         }
-        listaProdutos.add(produto);
+        repository.listaProdutos.add(produto);
         mostrarSeparador();
 
         System.out.println("Produto cadastrado com sucesso.");
@@ -48,7 +50,7 @@ public class ProdutoService {
     public void buscaProduto(String nome) {
         boolean produtoEncontrado = false;
 
-        for (Produto encontraProduto : listaProdutos) {
+        for (Produto encontraProduto : repository.listaProdutos) {
             if (encontraProduto.nome.equalsIgnoreCase(nome)) {
                 mostrarSeparador();
                 System.out.println("Produto encontrado " + "ID: " + encontraProduto.id);
@@ -92,7 +94,7 @@ public class ProdutoService {
             System.out.println("Digite uma quantidade válida");
             return;
         }
-        for (Produto produto : listaProdutos) {
+        for (Produto produto : repository.listaProdutos) {
             if (idRecebido == produto.id) {
                 produto.nome = novoNome;
                 produto.preco = novoPreco;
@@ -116,7 +118,7 @@ public class ProdutoService {
             System.out.println("ID negativo, por favor digite um ID válido.");
             return;
         }
-        boolean removido = listaProdutos.removeIf(produto -> produto.id == idDeletar);
+        boolean removido = repository.listaProdutos.removeIf(produto -> produto.id == idDeletar);
         if (!removido) {
             mostrarSeparador();
 
@@ -137,7 +139,7 @@ public class ProdutoService {
             return;
         }
 
-        for (Produto produto : listaProdutos) {
+        for (Produto produto : repository.listaProdutos) {
             if (produto.id == buscaPorId) {
                 mostrarSeparador();
 
@@ -157,11 +159,11 @@ public class ProdutoService {
     }
 
     public void mostraProduto() {
-        if (listaProdutos.isEmpty()) {
+        if (repository.listaProdutos.isEmpty()) {
             mostrarSeparador();
             System.out.println("Não temos produtos cadastrados");
         } else {
-            for (Produto produto : listaProdutos) {
+            for (Produto produto : repository.listaProdutos) {
                 mostrarSeparador();
                 produto.exibirDetalhes();
             }
