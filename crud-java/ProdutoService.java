@@ -38,10 +38,17 @@ public class ProdutoService {
                 return;
             }
         }
-        repository.listaProdutos.add(produto);
-        mostrarSeparador();
 
-        System.out.println("Produto cadastrado com sucesso.");
+        boolean adicionado = repository.produtoAdicionado(produto);
+
+        if (!adicionado) {
+            System.out.println("Produto inválido");
+
+            mostrarSeparador();
+        } else {
+
+            System.out.println("Produto cadastrado com sucesso.");
+        }
 
     }
 
