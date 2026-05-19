@@ -26,18 +26,30 @@ public class ProdutoRepository {
         return null;
     }
 
-     public Produto produtoBuscadoPorNome(String nome) {
+    public Produto produtoBuscadoPorNome(String nome) {
 
-                for (Produto produto : listaProdutos) {
-                    if(produto.nome.equalsIgnoreCase(nome)) {
+        for (Produto produto : listaProdutos) {
+            if (produto.nome.equalsIgnoreCase(nome)) {
 
-                        return produto;
-                    } 
-                    
-                    
-                }
-                return null;
+                return produto;
             }
 
-    
+        }
+        return null;
+    }
+
+    public boolean produtoAtualizado(int idRecebido, String novoNome, double novoPreco, int novaQtd) {
+        for (Produto produto : listaProdutos) {
+            if (idRecebido == produto.id) {
+                 produto.nome = novoNome;
+                produto.preco = novoPreco;
+                produto.quantidade = novaQtd;
+     
+                return true;
+            }
+
+        }
+        return false;
+    }
+
 }

@@ -72,7 +72,6 @@ public class ProdutoService {
     }
 
     public void atualizaProduto(int idRecebido, String novoNome, double novoPreco, int novaQtd) {
-
         if (novoNome.isBlank()) {
             mostrarSeparador();
             System.out.println("Digite um nome válido");
@@ -93,20 +92,18 @@ public class ProdutoService {
             System.out.println("Digite uma quantidade válida");
             return;
         }
-        for (Produto produto : repository.listaProdutos) {
-            if (idRecebido == produto.id) {
-                produto.nome = novoNome;
-                produto.preco = novoPreco;
-                produto.quantidade = novaQtd;
-                mostrarSeparador();
-                System.out.println("Produto atualizado com sucesso.");
-                System.out.println("Nome:" + novoNome);
-                System.out.println("Preço: " + novoPreco);
-                System.out.println("Quantidade:  " + novaQtd);
-                return;
-            }
+        boolean produtoAtualizado = repository.produtoAtualizado(idRecebido, novoNome, novoPreco, novaQtd);
+
+        if (produtoAtualizado == false) {
+            System.out.println("Id não encontrado");
+        } else {
+            System.out.println("Produto atualizado com sucesso.");
+            mostrarSeparador();
+            System.out.println("Nome:" + novoNome);
+            System.out.println("Preço: " + novoPreco);
+            System.out.println("Quantidade:  " + novaQtd);
+
         }
-        System.out.println("Id não encontrado");
 
     }
 
