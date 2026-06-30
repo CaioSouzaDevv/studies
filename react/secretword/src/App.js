@@ -15,6 +15,9 @@ const stages = [
 ];
 
 function App() {
+	const [words] = useState(wordsList);
+
+	console.log(words);
 	const [gameStage, setGameStage] = useState(stages[0].name);
 	return (
 		<div className="App">
