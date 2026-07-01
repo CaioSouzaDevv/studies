@@ -27,15 +27,20 @@ function App() {
 		const category = categories[Math.floor(Math.random() * Object.keys(categories).length)];
 		console.log(category);
 
-		const word = words[category][Math.floor(Math.random() * words[category].length)]
+		const word = words[category][Math.floor(Math.random() * words[category].length)];
 
 		return { word, category };
 	};
 	const startGame = () => {
 		setGameStage(stages[1].name);
-		const {word, category } = pickWordAndCategory();
+		const { word, category } = pickWordAndCategory();
+
+		let wordLetters = word.split("");
+
+		wordLetters = wordLetters.map((l) => l.toLowerCase());
 
 		console.log(word, category);
+		console.log(wordLetters);
 	};
 
 	const verifyLetter = () => {
