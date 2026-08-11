@@ -1,23 +1,29 @@
 .start {
+    margin: 25px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.start .start__logo {
+    width: 30%;
+}
 .start h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: white;
+    text-align: center;
 }
 .start p {
     margin-bottom: 2em;
-    color: #ecfa00;
+    color: #f4f4f4;
+    text-align: center;
 }
-button {
-    background-color: #1646a0;
+.start .start_button {
+    background-color: #6a43da;
     color: #fff;
     padding: 0 45px;
-    border: 2px solid #fff;
-    border-radius: 25px;
+
+    border-radius: 10px;
     height: 50px;
     text-transform: uppercase;
     font-weight: bold;

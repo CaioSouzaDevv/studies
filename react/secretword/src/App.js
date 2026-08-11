@@ -41,6 +41,10 @@ function App() {
 
 		console.log(word, category);
 		console.log(wordLetters);
+
+		setPickedWord(word);
+		setPickedCategory(category);
+		setLetters(letters);
 	};
 
 	const verifyLetter = () => {

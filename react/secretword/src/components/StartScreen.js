@@ -1,11 +1,16 @@
 import "./StartScreen.css";
+import startScreenLogo from "../assets/startScreen/start-screen-logo.png";
 
 const StartScreen = ({ startGame }) => {
 	return (
 		<div className="start">
-			<h1>Secret Word</h1>
-			<p>Clique no botão abaixo para começar a jogar</p>
-			<button onClick={startGame}>Começar o Jogo</button>
+			<img src={startScreenLogo} className="start__logo" alt="Secret World" />
+
+			<h1>Bem-vindo ao jogo</h1>
+			<p>Adivinha a palavra secreta letra por letra <br /> e teste seus conhecimentos! </p>
+
+			<button className="start_button">Começar o jogo</button>
+		
 		</div>
 	);
 };
