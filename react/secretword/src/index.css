@@ -11,3 +11,9 @@ background: #1a193a;
 h1, h2, h3, p, span {
   color: #fff;
 }
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px 0;
+  width: 100%;
+}

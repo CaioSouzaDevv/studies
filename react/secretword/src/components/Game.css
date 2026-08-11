@@ -1,0 +1,42 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px 25px 0;
+    border-bottom: 1px solid #7a56e6;
+}
+.game h1 {
+    font-size: 22px;
+}
+.game .game__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.game .game__header-icon {
+    width: 15%;
+    object-fit: contain;
+  
+
+}
+.game .game__box-points {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+}
+.game .game__points {
+    line-height: 1px;
+}
+
+.game .game__tentativas {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2px;
+    text-align: center;
+}
