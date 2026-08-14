@@ -1,6 +1,8 @@
 import "./Game.css";
 import trofeu from "../assets/game/trofeu.png";
 import coracao from "../assets/game/coracao.png";
+import lampada from "../assets/game/lampada.png";
+
 const Game = ({ verifyLetter }) => {
 	return (
 		<div className="wrapper">
@@ -26,7 +28,36 @@ const Game = ({ verifyLetter }) => {
 						</div>
 					</div>
 				</div>
+
+				<div className="dica">
+					<img src={lampada} alt="Dica" width={100} />
+
+					<div>
+						<p>Dica sobre a palavra
+						<br />
+						Animal da Selva</p>
+					</div>
+				</div>
+
+
+
+				<div className="adivinhe">
+					<h2>Adivinhe a Palavra</h2>
+					
+					<div className="adivinhe__letter">
+						<span>A</span>
+					</div>
+					
+				</div>
+
+
+
+
 			</div>
+
+
+
+
 		</div>
 	);
 };

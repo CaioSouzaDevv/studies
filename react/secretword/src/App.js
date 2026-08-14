@@ -8,9 +8,9 @@ import { wordsList } from "./data/words";
 import Game from "./components/Game";
 // import GameOver from "./components/GameOver";
 
-
 function App() { 
 
 return <Game />
+
 }
 export default App;

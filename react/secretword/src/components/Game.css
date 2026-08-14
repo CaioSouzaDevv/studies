@@ -3,8 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0px 0px 25px 0;
-    border-bottom: 1px solid #7a56e6;
+
 }
 .game h1 {
     font-size: 22px;
@@ -14,6 +13,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+        padding: 0px 0px 25px 0;
+    border-bottom: 1px solid #7a56e6;
     
 }
 .game .game__header-icon {
@@ -39,4 +40,24 @@
     justify-content: center;
     line-height: 2px;
     text-align: center;
+}
+
+.dica {
+    display: flex;
+    align-items: center;
+    background-color: #1f1d40;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 25px;
+    width: 80%;
+    margin: 35px 0;
+}
+
+.adivinhe .adivinhe__letter {
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 10%;
+    text-align: center;
+
 }
