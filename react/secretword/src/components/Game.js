@@ -33,31 +33,33 @@ const Game = ({ verifyLetter }) => {
 					<img src={lampada} alt="Dica" width={100} />
 
 					<div>
-						<p>Dica sobre a palavra
-						<br />
-						Animal da Selva</p>
+						<p>
+							Dica sobre a palavra
+							<br />
+							Animal da Selva
+						</p>
 					</div>
 				</div>
-
-
 
 				<div className="adivinhe">
 					<h2>Adivinhe a Palavra</h2>
-					
+
 					<div className="adivinhe__letter">
 						<span>A</span>
 					</div>
-					
+				</div>
+
+				<div className="tentativa">
+					<h2>Tente uma letra</h2>
+
+					<div className="tentativa__box">
+						<input className="tetativa__input" type="text" placeholder="Digite uma letra" />
+						<button className="adivinhe__button">Jogar</button>
+					</div>
 				</div>
 
 
-
-
 			</div>
-
-
-
-
 		</div>
 	);
 };
