@@ -5,12 +5,12 @@ import { useCallback, useEffect, useState } from "react";
 import { wordsList } from "./data/words";
 
 // import StartScreen from "./components/StartScreen";
-import Game from "./components/Game";
-// import GameOver from "./components/GameOver";
+// import Game from "./components/Game";
+import GameOver from "./components/GameOver";
 
 function App() { 
 
-return <Game />
+return <GameOver />
 
 }
 export default App;

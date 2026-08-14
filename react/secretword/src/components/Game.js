@@ -3,7 +3,7 @@ import trofeu from "../assets/game/trofeu.png";
 import coracao from "../assets/game/coracao.png";
 import lampada from "../assets/game/lampada.png";
 
-const Game = ({ verifyLetter }) => {
+const Game = () => {
 	return (
 		<div className="wrapper">
 			<div className="game">
@@ -19,7 +19,7 @@ const Game = ({ verifyLetter }) => {
 					<div>
 						<h1>SECRET WORLD</h1>
 					</div>
-
+		
 					<div className="game__tentativas">
 						<img className="game__header-icon" src={coracao} width={10} alt="" />
 						<div>
@@ -44,8 +44,9 @@ const Game = ({ verifyLetter }) => {
 				<div className="adivinhe">
 					<h2>Adivinhe a Palavra</h2>
 
-					<div className="adivinhe__letter">
-						<span>A</span>
+					<div className="adivinhe__box">
+						<span className="adivinhe__letter">A</span>
+						<span className="adivinhe__letter">A</span>
 					</div>
 				</div>
 
@@ -56,9 +57,15 @@ const Game = ({ verifyLetter }) => {
 						<input className="tetativa__input" type="text" placeholder="Digite uma letra" />
 						<button className="adivinhe__button">Jogar</button>
 					</div>
+					<p className="tentativa__warning">Apenas uma letra por vez</p>
 				</div>
 
-
+				<div className="utilizadas">
+					<div className="utilizadas__box">
+						<h2>Letras já utilizadas</h2>
+						<p className="utilizadas__letter">A</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

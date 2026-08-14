@@ -1,0 +1,14 @@
+.game-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-over .game-over__button {
+    padding: 15px;
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+}
