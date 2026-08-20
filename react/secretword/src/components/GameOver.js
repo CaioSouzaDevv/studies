@@ -6,7 +6,7 @@ const GameOver = () => {
 		<div className="wrapper">
 			<div className="game-over">
 				<img src={gameOver} alt="" width={150} />
-
+  
 				<h1>GAME OVER</h1>
 				<p>A palavra era:</p>
 				<h2>PALAVRA</h2>

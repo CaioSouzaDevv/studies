@@ -19,7 +19,7 @@ const Game = () => {
 					<div>
 						<h1>SECRET WORLD</h1>
 					</div>
-		
+
 					<div className="game__tentativas">
 						<img className="game__header-icon" src={coracao} width={10} alt="" />
 						<div>
