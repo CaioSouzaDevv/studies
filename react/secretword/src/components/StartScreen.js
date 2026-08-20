@@ -9,7 +9,7 @@ const StartScreen = ({ startGame }) => {
 			<h1>Bem-vindo ao jogo</h1>
 			<p>Adivinha a palavra secreta letra por letra <br /> e teste seus conhecimentos! </p>
 
-			<button className="start_button">Começar o jogo</button>
+			<button onClick={startGame}  className="start_button">Começar o jogo</button>
 		
 		</div>
 	);

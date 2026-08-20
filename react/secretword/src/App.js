@@ -8,28 +8,30 @@ import StartScreen from "./components/StartScreen";
 import Game from "./components/Game";
 import GameOver from "./components/GameOver";
 
+function App() {
+	const [etapa, setEtapa] = useState("start");
 
+	const restartGame = () => {
+		setEtapa("start");
+	};
 
-function App() { 
-    const [etapa, setEtapa] = useState('startScreen');
+	const startGame = () => {
+		setEtapa("game");
+	};
 
-    return (
-        <>
-          {etapa === 'inicio' &&
-      <Game />
-    }
+	const finishGame = () => {
+		setEtapa("gameOver");
+	};
 
-    {etapa === 'gameover' && 
-    <GameOver />}
+	return (
+		<>
+			{etapa === "start" && <StartScreen />}
+			{etapa === "game" && <Game />}
 
-    {etapa === 'startScreen' && 
-    <StartScreen />
-    }
-        </>
-    )
-  
-    
-// return <GameOver />
+			{etapa === "gameOver" && <GameOver />}
+		</>
+	);
 
+	// return <GameOver />
 }
 export default App;

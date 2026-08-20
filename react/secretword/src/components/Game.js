@@ -3,7 +3,7 @@ import trofeu from "../assets/game/trofeu.png";
 import coracao from "../assets/game/coracao.png";
 import lampada from "../assets/game/lampada.png";
 
-const Game = () => {
+const Game = ( startGame ) => {
 	return (
 		<div className="wrapper">
 			<div className="game">
@@ -55,7 +55,7 @@ const Game = () => {
 
 					<div className="tentativa__box">
 						<input className="tetativa__input" type="text" placeholder="Digite uma letra" />
-						<button className="adivinhe__button">Jogar</button>
+						<button className="adivinhe__button" onClick={gameOver}>Finalizar</button>
 					</div>
 					<p className="tentativa__warning">Apenas uma letra por vez</p>
 				</div>
